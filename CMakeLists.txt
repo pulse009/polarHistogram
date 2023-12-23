@@ -12,8 +12,17 @@ find_package(SDL2 REQUIRED)
 file(GLOB imgui_sources
     src/imgui/*.h
     src/imgui/*.cpp
-    src/imgui/backends/*.h
-    src/imgui/backends/*.cpp
+    src/imgui/backends/imgui_impl_glfw.h
+    src/imgui/backends/imgui_impl_opengl2.h
+    src/imgui/backends/imgui_impl_opengl3_loader.h
+    src/imgui/backends/imgui_impl_sdl2.h
+    src/imgui/backends/imgui_impl_opengl3.h
+    src/imgui/backends/imgui_impl_sdlrenderer2.h
+    src/imgui/backends/imgui_impl_glfw.cpp
+    src/imgui/backends/imgui_impl_opengl2.cpp
+    src/imgui/backends/imgui_impl_opengl3.cpp
+    src/imgui/backends/imgui_impl_sdl2.cpp
+    src/imgui/backends/imgui_impl_sdlrenderer2.cpp
 )
 
 add_executable(${PROJECT_NAME} polarHist.h main.cpp ${imgui_sources})
